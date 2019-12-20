@@ -1,0 +1,5 @@
+Maltese_dog
+cairn
+pug
+afghan_hound
+beagle

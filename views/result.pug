@@ -1,0 +1,41 @@
+doctype html
+head
+    title Result
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+    style.
+        td {
+            width: 14.28% ;
+            text-align: center;
+        }
+        th {
+            width: 14.28% ;
+            text-align: center;
+        }
+.container
+    h2 Text Classifier
+    a(href='/api')
+        button.btn.btn-success(type='button') API
+    a(href='/logout')
+        button.btn.btn-warning(type='button') Logout
+    h3 Text
+    p.text-justify= text
+    table.table
+        thead
+            tr
+                th(scope='col') Identity Attack
+                th(scope='col') Insult
+                th(scope='col') Obscene
+                th(scope='col') Severe Toxicity
+                th(scope='col') Sexual Explicit
+                th(scope='col') Threat
+                th(scope='col') Toxicity
+        tbody
+            tr
+            each field in res
+                td=field
+    a(href='/home')
+        button.btn.btn-success(type='button') Back

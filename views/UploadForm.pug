@@ -1,0 +1,141 @@
+head
+  title File Uploading Form
+  style.
+    @font-face {
+    font-family: myFont;
+    src: url(2.otf);
+    }
+    @font-face {
+    font-family: myfonts;
+    src: url(1.ttf);
+    }
+    body {
+    color: white;
+    padding: 0;
+    background-image: url("dogs.jpg");
+    /* position: absolute; */
+    background-size: cover;
+    }
+    * {
+    font-family: 'myfonts';
+    color: mediumturquoise;
+    }
+    header {
+    text-align: center;
+    }
+    header h1 {
+    text-transform: uppercase;
+    }
+    input[type="submit"]:hover {
+    background-color: mediumturquoise;
+    border-color: #fff;
+    color: #fff;
+    }
+    input[type="file"]:hover {
+    background-color: mediumturquoise;
+    border-color: #fff;
+    color: #fff;
+    }
+    .myButt {
+    outline: none;
+    border: none;
+    padding: 20px;
+    display: block;
+    margin: 50px auto;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: transparent;
+    position: relative;
+    border: 2px solid #fff;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    }
+    .three {
+    color: #fff;
+    border-color: transparent;
+    font-size: 1.5vw;
+    letter-spacing: 2px;
+    }
+    input[type="submit"] {
+    font-display: myfonts;
+    color: #fff;
+    border-color: #fff;
+    }
+    input[type="file"] {
+    font-display: myfonts;
+    color: #fff;
+    border-color: #fff;
+    }
+    .three:before,
+    .three:after {
+    width: 0;
+    height: 3px;
+    content: " ";
+    background-color: mediumturquoise;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    }
+    .three:after {
+    top: 100%;
+    }
+    .three:hover {
+    letter-spacing: 8px;
+    color: snow;
+    }
+    .three:hover:before,
+    .three:hover:after {
+    width: 100%;
+    left: 0;
+    }
+    .three:hover:after {
+    width: 100%;
+    left: 0;
+    }
+    @keyframes slide {
+    0% {
+    background-position-x: 0%;
+    }
+    100% {
+    background-position-x: 600vw;
+    }
+    }
+    body h2,
+    body h1 {
+    font-family: 'myFont';
+    margin: 0;
+    position: relative;
+    text-align: center;
+    }
+    .clip {
+    font-family: 'myFont';
+    font-size: 8vw;
+    background: repeating-linear-gradient(-45deg, cyan 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%);
+    background-size: 600vw 600vw;
+    -webkit-animation: 'slide'10s infinite linear forwards;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    }
+    [class^="conclude"] {
+    font-family: 'myFont';
+    color: snow;
+    }
+    .conclude1 {
+    font-family: 'myFont';
+    font-size: 4vw;
+    }
+form(action='http://127.0.0.1:1338/file_upload', method='POST', enctype='multipart/form-data')
+  .container
+    .section.section5
+      h2.conclude1 Wanna know more about your Dog?
+      h1.conclude2.clip Here&apos;s the oppertunity!
+    input.myButt.three(type='file', name='file', size='50')
+    input.myButt.three(type='submit', value='Upload File')
